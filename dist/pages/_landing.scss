@@ -1,0 +1,211 @@
+// .join{
+
+//     &__wrapper{
+//         background: $clr-green;
+//         font-family: Arial, Helvetica, sans-serif;
+//         display:flex;
+//         align-items:center;
+//         justify-content:space-between;
+//         margin: 0 2rem;
+//     }
+// }
+
+.banner{
+    background-image: url("../img/star.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 600px;
+    background-color: #D4E9E2;
+    background-position-y: 35rem;
+    background-position-x: 20rem;
+    // display: flex;
+    text-align: center;
+    padding-top: 6rem;
+    font-family: Arial, Helvetica, sans-serif;
+  @include mediaQuery($break-lg){
+    background-position-y: 10rem;
+    background-position-x: 100rem;
+    text-align: unset;
+    align-items: center;
+  }
+}
+
+.steps{
+
+    font-family:Arial, Helvetica, sans-serif;
+    background: #ffffff;
+
+    &__text{
+        margin:3rem 0;
+        h2{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+    }
+
+
+    &__number{
+        display: flex;
+        width: fit-content;
+
+        margin: 2rem;
+
+        h1{
+            color: #009658;
+            border: 2px solid #009658;
+            border-radius: 5rem;
+            width:5rem;
+            height:5rem;
+            padding: 1rem 1.7rem;
+            margin-right: 1rem;
+        }
+    }
+
+    &__item{
+        span{
+            a{
+                color: #009658;
+                text-decoration: underline #009658;
+
+                &:hover{
+                    text-decoration: unset;
+                }
+            }
+        }
+    }
+
+    @include mediaQuery($break-lg){
+
+        margin-top: 10rem;
+        margin-bottom: 5rem;
+
+        &__text{
+            h2{
+                font-size: 2.8rem;
+                color: #212121;
+            }
+            p{
+                margin-top: 2rem;
+                font-weight: bolder;
+            }
+        }
+
+        &__list{
+            display: flex;
+            justify-content: center;
+        }
+
+        &__number{
+            flex-direction:column;
+            text-align: center;
+            justify-content: center;
+
+            h1{
+                margin: 0 auto;
+            }
+            h3{
+                margin: 4rem 0;
+            }
+
+            p{
+                max-width: 40rem;
+            }
+
+
+        }
+
+    }
+
+}
+
+.coffee{
+
+    font-family: Arial, Helvetica, sans-serif;
+    &__nav{
+        background: #f1f8f5;
+        padding-top: 5rem;
+        text-align: center;
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 3rem;
+
+            li{
+                padding: 2rem 1.5rem;
+                border-bottom: 4px solid transparent;
+
+                &.active{
+                    border-bottom: 4px solid #00754a;
+                }
+                a{
+                    font-size: 2rem;
+                    color: $clr-dark;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    &__content{
+        background: #d4e9e2;
+
+    .coffee__tab__content{
+        // display: flex;
+        // flex-direction: column;
+        display: none;
+        margin: 0 3rem;
+        &.active{
+            display:flex;
+            flex-direction: column;
+        }
+        img{
+            @include imgFit(45rem,100%);
+        }
+
+        &__text{
+            text-align: center;
+        }
+    }
+    }
+
+    @include mediaQuery($break-lg){
+        &__nav{
+        
+            ul{
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        .coffee__desc{
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .coffee__tab__content{
+            align-items: center;
+            text-align: left;
+            max-width: 100rem;
+            margin: 0 auto;
+            &.active{
+                flex-direction: row;
+            }
+        }
+
+        .coffee__tab__content__text{
+            text-align: left;
+            max-width: 28rem;
+
+            p{
+                margin: 2rem 0;
+                line-height:2.5rem;
+            }
+        }
+
+    }
+}
