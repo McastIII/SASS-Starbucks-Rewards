@@ -1,0 +1,97 @@
+.links{
+
+    &__wrapper{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    &__drop{
+
+        &__item{
+
+            &:not(:first-child),
+            &:not(:last-child) {
+
+                margin: 3rem 0;
+            }
+            h4{
+                font-size: 1.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                i {
+                    transition: .5s ease;
+
+                    &.open {
+                        transform: rotate(180deg);
+                        transition: .5s ease;
+                    }
+                }
+            }
+            
+            ul {
+                margin: 0 2rem;
+                max-height: 0rem;
+                overflow: hidden;
+                transition: .5s ease;
+
+                &.open {
+                    max-height: 25rem;
+                    transition: .5s ease;
+                }
+
+                li {
+
+                    padding: 1rem 0;
+
+                    a {
+                        color: $clr-dark;
+                        font-size: 1.2rem;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+
+                        a {
+                            color: $clr-dark;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include mediaQuery($break-lg){
+        &__wrapper {
+        display:grid;
+        grid-template-columns: 4fr 1fr;
+        }
+
+        &__drop{
+            margin: 0;
+            display: flex;
+            align-items: start;
+            gap:6.5rem;
+
+            &__item{
+            
+            &:not(:first-child),
+            &:not(:last-child) {
+
+                margin: 0;
+            }
+            h4{
+                font-size: 2rem;
+                font-weight: bolder;
+                pointer-events: none;
+                i{
+                    display: none;
+                }
+            }
+            ul{
+                max-height: 20rem;
+                margin: 1rem 0;
+            }
+            }
+        }
+    }
+}

@@ -42,6 +42,7 @@
 
 &__nav{
     display: block;
+    background: $clr-light;
     position: absolute;
     top:8.1rem;
     right: -100rem;
@@ -64,7 +65,7 @@
 
             .menu{
                 i{
-                    margin-left: 27rem;
+                    margin-left: 25rem;
                 }
             }
         }
@@ -87,19 +88,12 @@
 }
 
 &__actions{
-
-    display: flex;
-
+    
     ul{
         display: flex;
-        flex-direction: column-reverse;
-        li{
-            &:nth-child(2){
-                order:1;
-            }
+        flex-wrap:wrap;
 
-        }
-
+        padding-top: 2rem;
     }
 
     .find__store{
@@ -114,8 +108,10 @@
     }
 
     .btn {
+
         padding: .7rem 2rem;
         border-radius: 4rem;
+
 
     }
     
@@ -154,6 +150,7 @@
 .toggle__menu{
     display: block;
 
+    
     span{
         width: 2rem;
         height: .2rem;

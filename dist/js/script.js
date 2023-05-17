@@ -10,15 +10,15 @@ toggleMenu.addEventListener("click", () => {
 
 
 
-// // dropdown
-// const links = document.querySelectorAll(".links__drop__item h4");
+// dropdown
+const links = document.querySelectorAll(".links__drop__item h4");
 
-// links.forEach((baba) => {
-//     baba.addEventListener("click", () => {
-//     baba.nextElementSibling.classList.toggle("open");
-//     baba.querySelector("i").classList.toggle("open");
-//     });
-// });
+links.forEach((baba) => {
+    baba.addEventListener("click", () => {
+    baba.nextElementSibling.classList.toggle("open");
+    baba.querySelector("i").classList.toggle("open");
+    });
+});
 
 //coffee nav
 const starNav = document.querySelectorAll(".star__nav__link");
