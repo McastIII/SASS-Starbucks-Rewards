@@ -404,29 +404,80 @@
     }
 
     @include mediaQuery($break-lg){
-        &__list{
-            display: block;
 
-            align-items: center;
-            justify-content: space-between;
-        }
         &__item{
-            display:flex;
-            flex-direction: row;
-            padding: 0 5rem;
-            // gap:3rem;
-            // justify-content: space-around;
-        }
-
-        &__content{
-            h4{
-                max-width: 50rem;
-            }
-            p{
-                max-width: 50rem;
+            display: grid;
+            grid-template-columns: .5fr 1fr 1.5fr;
+            
+            img{
+                margin: unset;
+                padding: 2rem;
             }
         }
 
 
+    }
+}
+
+.rewards{
+    background: #d4e9e2;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 8rem 0;
+    &__wrapper{
+        text-align: center;
+    }
+
+    &__text{
+        h1{
+            font-size: 3rem;
+            max-width: 30rem;
+            margin: 0 auto;
+        }
+        p{
+            font-size: 1.7rem;
+            max-width: 40rem;
+            margin: 0 auto;
+            padding: 3rem 0;
+            line-height: 2.5rem;
+        }
+
+        span{
+
+            a{
+                color: #009658 ;
+            }
+        
+            color: #009658;
+            text-decoration: underline;
+
+            &:hover{
+            text-decoration: unset;
+            }
+        
+        img{
+            width: 1rem;
+        }
+    }
+}
+    .btn{
+        display: flex;
+        font-size: 1.2rem;
+        width: fit-content;
+        gap: 1rem;
+
+        font-weight: bold;
+        cursor: pointer;
+        margin: 0 auto;
+    }
+
+    .btn.join{
+        background-color: #00754a;
+        padding: 1.5rem;
+        color: $clr-light;
+        border-radius: 4rem;
+        font-weight: 600;
+        font-size: 1.5rem;
+
+        
     }
 }
